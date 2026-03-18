@@ -1,0 +1,17 @@
+
+<h2>Cadastro</h2>
+
+<form (ngSubmit)="register()">
+
+  <label>Nome:</label>
+  <input type="text" formControlName="name">
+
+  <label>Email:</label>
+  <input type="email" formControlName="email">
+
+  <label>Senha:</label>
+  <input type="password" formControlName="password">
+
+  <button type="submit">Cadastrar</button>
+
+</form>

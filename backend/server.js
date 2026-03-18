@@ -15,10 +15,8 @@ app.listen(3000, () => {
   console.log("Servidor rodando em http://localhost:3000");
 });
 
-// const app = require('./src/app');
+const app = require('./src/app');
 
-// const PORT = 3000;
-
-// app.listen(PORT, () => {
-//     console.log(`Servidor rodando na porta ${PORT}`);
-// });
+app.listen(3000, () => {
+  console.log("Servidor rodando em http://localhost:3000");
+});
