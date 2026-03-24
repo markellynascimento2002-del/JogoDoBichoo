@@ -1,17 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="estilo.css">
 
-<h2>Cadastro</h2>
+</head>
 
-<form (ngSubmit)="register()">
+<body>
+<div id="formulario"> 
+    <p><h2>Cadastro</h2></p>
+    
+    <form (ngSubmit)="register()" [formGroup]="registerForm" method="post">
 
-  <label>Nome:</label>
-  <input type="text" formControlName="name">
+      <p>
+        <label>Nome:</label>
+        <input type="text" formControlName="name">
+      </p>
 
-  <label>Email:</label>
-  <input type="email" formControlName="email">
+      <p>
+        <label>Email:</label>
+        <input type="email" formControlName="email">
+      </p>
 
-  <label>Senha:</label>
-  <input type="password" formControlName="password">
+      <p>
+        <label>Senha:</label>
+        <input type="password" formControlName="password">
+      </p>
 
-  <button type="submit">Cadastrar</button>
+      <p>
+        <button type="submit">Cadastrar</button>
+      </p>
 
-</form>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+
+@import url('https://Crimson.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 1;
+    margin: 1;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../img/fundo.png);
+    background-size: cover;
+
+    font-family: Pacifico; /* estilo da fonte */
+}
+
+
+#formulario h2{
+    text-align: center;
+    margin: 6px;
+}
+
+#formulario p{
+    text-align: center;
+    margin: 6px;
+}
+
+#formulario label{   
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+}
+
+#formulario{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 16px;
+    border-radius: 4px;
+
+    background-color: rgba(255, 255, 255, 0.231);
+    backdrop-filter: blur(4px); /* efeito borrão */
+}
