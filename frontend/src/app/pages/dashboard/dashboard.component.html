@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<h2>Dashboard</h2>
+
+<p>Saldo: {{ balance?.balance }}</p>
+
+<h3>Escolha um Bicho</h3>
+
+
+<div class="grid-bichos">
+  <div 
+    class="bicho-card"
+    *ngFor="let bicho of bichos"
+    (click)="bichoSelecionado = bicho"
+    [class.selected]="bichoSelecionado?.grupo === bicho.grupo"
+  >
+    <img [src]="bicho.img" alt="{{ bicho.nome }}">
+    <p>{{ bicho.nome }}</p>
+    <small>Grupo {{ bicho.grupo }}</small>
+  </div>
+</div>
+
+<hr>
+
+<h3>Apostar</h3>
+
+<p *ngIf="bichoSelecionado">
+  Selecionado: <b>{{ bichoSelecionado.nome }}</b>
+</p>
+
+<input placeholder="Número">
+<input type="number" placeholder="Valor">
+
+<button (click)="bet()">Apostar</button>
+
+<hr>
+
+<button (click)="draw()">Simular Sorteio</button>
